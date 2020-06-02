@@ -1,7 +1,7 @@
 # IRIE-term-project2018: Community Question Answering
 
 
-Community Question Answering (CQA) provides the information to users more flexibility. The platform such as Stack Overflow and Quora offer a place that anyone can post and answer a question. Some of anwers are helpful for users, and some of them are unrelated to the question. It may take much time for users to find the correct answer. So the task can help automate the process of finding good answers to the certain question.
+Community Question Answering (CQA) provides the information to users more flexibility. The platform such as Stack Overflow and Quora offers a place that everyone can post and answer a question. Some of anwers are helpful for users, and some of them are unrelated to the question. It may take much time for users to find the correct answer. So the task can help automate the process of finding good answers to the certain question.
 
 For further information of Community Question Answering:
  - [SemEval-2017Task3: CommunityQuestionAnswering](https://www.aclweb.org/anthology/S17-2003.pdf) [[Website](http://alt.qcri.org/semeval2017/task3/)]
@@ -43,12 +43,15 @@ For further information of the project: [term.pdf](https://github.com/lilinmail0
 
 
 # Data preprocessing:
-In this project, the test data including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody and RelCtext were used for furthur processes. Data preprocessing consists of the following steps:
-1. Noise removal: Extracting data from xml files
+
+In this project, the test data including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody, and RelCtext were used for further processes. Data preprocessing consists of the following steps:
+1. Noise removal: Extracting data from XML files
 2. Contractions and punctuation replacement: removing punctuation
-3. Word tokenization: spliting the sentences into words
+3. Word tokenization: splitting the sentences into words
 4. Lowercases and numbers conversion
 5. non-ASCII characters and stopwords removal (by nltk stopwords corpus)
+
+Reference: [Data cleaning](https://www.kdnuggets.com/2018/03/text-data-preprocessing-walkthrough-python.html)
 
 # Model
 CO<sub>2</sub>
@@ -59,7 +62,7 @@ CO<sub>2</sub>
 
 We'll take a look at BM25 formula. q<sub>i</sub> is ith term query. f<sub>i,j</sub> tells how many times i<sup>th</sup> term in query which occurs in document j. K<sub>1</sub> and b are parameters that depend on cases. With BM25 scores, we can give documents a rank.
 
-* PS: Because the K<sub>1</sub> and b would be changed in BM25, the [genism BM25](https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/summarization/bm25.py) was taken here (name: bm25_util.py) for furthur processes.  
+* PS: Because the K<sub>1</sub> and b would be changed in BM25, the [genism BM25](https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/summarization/bm25.py) was taken here (name: bm25_util.py) for further processes.  
 
 ![BM25 result K1](https://github.com/lilinmail0523/IRIE-term-project2018/blob/master/image/BM25ResultK1.png)
 
@@ -69,7 +72,7 @@ We'll take a look at BM25 formula. q<sub>i</sub> is ith term query. f<sub>i,j</s
 
 
 ## LDA
-In LDA, each word is viewed as a mixture of various topics. We can assign each word a set of topics probability via LDA. To acquire document topics vectors, we can use word topics to deal with it. Finding a proper way converting word topics to documents/quires topics is viewed as hard work. In this project, we apply two approach (average, tf-idf) to do so.
+In LDA, each word is viewed as a mixture of various topics. We can assign each word a set of topics probability via LDA. To acquire document topics vectors, we can use word topics to deal with it. Finding a proper way to convert word topics to documents/quires topics is viewed as hard work. In this project, we apply two approaches (average, tf-idf) to do so.
 
 Average: term topic * term **frequency** in documents/queries and sum up to obtain documents/queries topic scores.
 tf-idf: term topic * term **tf-idf weight** in documents/queries and sum up to obtain documents/queries topic scores.
@@ -78,4 +81,4 @@ tf-idf: term topic * term **tf-idf weight** in documents/queries and sum up to o
 
 cos: cosine similarity/ l2: L2 distance
 
-Not surprisingly, term tf-idf weight outperform term frequency. Because tf-idf model intend to reflect how important a word is to a document/query. For similarity calculation, cosine similarity is a common tool to compare two vectors. L2 distance, known as Euclidean distance, results in poor performance.  
+Not surprisingly, term tf-idf weight outperformed term frequency. Because tf-idf model intended to reflect how important a word was to a document/query. For similarity calculation, cosine similarity is a common tool to compare two vectors. L2 distance, known as Euclidean distance, resulted in poor performance.  
