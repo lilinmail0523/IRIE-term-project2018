@@ -1,7 +1,7 @@
 # IRIE-term-project2018: Community Question Answering
 
 
-Community Question Answering (CQA) provide the information to users more flexibility. The platform such as Stack Overflow and Quora offer a place that anyone can post and answer a question. Some of anwers are helpful for users, and some of them are unrelated to the question. It may take much time for users to find the correct answer. So the task can help automate the process of finding good answers to the certain question.
+Community Question Answering (CQA) provides the information to users more flexibility. The platform such as Stack Overflow and Quora offer a place that anyone can post and answer a question. Some of anwers are helpful for users, and some of them are unrelated to the question. It may take much time for users to find the correct answer. So the task can help automate the process of finding good answers to the certain question.
 
 For further information of Community Question Answering:
  - [SemEval-2017Task3: CommunityQuestionAnswering](https://www.aclweb.org/anthology/S17-2003.pdf) [[Website](http://alt.qcri.org/semeval2017/task3/)]
