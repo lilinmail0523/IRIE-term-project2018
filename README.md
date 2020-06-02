@@ -51,10 +51,9 @@ In this project, the test data including IDs, OrgQSubject, OrgQBody, RelQSubject
 4. Lowercases and numbers conversion
 5. non-ASCII characters and stopwords removal (by nltk stopwords corpus)
 
-Reference: [Data cleaning](https://www.kdnuggets.com/2018/03/text-data-preprocessing-walkthrough-python.html)
+Reference: [Text Data Preprocessing: A Walkthrough in Python](https://www.kdnuggets.com/2018/03/text-data-preprocessing-walkthrough-python.html)
 
 # Model
-CO<sub>2</sub>
 
 ## BM25
 
