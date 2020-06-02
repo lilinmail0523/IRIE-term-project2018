@@ -74,6 +74,7 @@ We'll take a look at BM25 formula. q<sub>i</sub> is ith term query. f<sub>i,j</s
 In LDA, each word is viewed as a mixture of various topics. We can assign each word a set of topics probability via LDA. To acquire document topics vectors, we can use word topics to deal with it. Finding a proper way to convert word topics to documents/quires topics is viewed as hard work. In this project, we apply two approaches (average, tf-idf) to do so.
 
 Average: term topic * term **frequency** in documents/queries and sum up to obtain documents/queries topic scores.
+
 tf-idf: term topic * term **tf-idf weight** in documents/queries and sum up to obtain documents/queries topic scores.
 
 ![LDA result b](https://github.com/lilinmail0523/IRIE-term-project2018/blob/master/image/LDAResult.png)
