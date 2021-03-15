@@ -37,8 +37,7 @@ Given **a new question** (aka the original question) and the set of the first 10
 
 # Data preprocessing:
 
-First, the entities including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody, and RelCtext were fetched from data. Second, preprocessing followed the five steps: noise removal, contractions and punctuation replacement, word tokenization, lowercases and numbers conversion, and non-ASCII characters and stopwords removal. (by nltk stopwords corpus)
-
+First, the entities including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody, and RelCtext were fetched from data. Second, preprocessing followed the five steps: noise removal, contractions and punctuation replacement, word tokenization, lowercases and numbers conversion, and non-ASCII characters and stopwords removal.
 
 # Model
 
