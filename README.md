@@ -37,12 +37,12 @@ Given **a new question** (aka the original question) and the set of the first 10
 
 # Data preprocessing:
 
-First, the entities including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody, and RelCtext were fetched from data. Second, preprocessing followed the five steps: 
-1. Noise removal
-2. Contractions and punctuation replacement
-3. Word tokenization
-4. Lowercases and numbers conversion
-5. Non-ASCII characters and stopwords removal
+First, the entities including IDs, OrgQSubject, OrgQBody, RelQSubject, RelQBody, and RelCtext were fetched from data. Second, preprocessing followed the four steps: 
+
+1. Contractions and punctuation replacement
+2. Word tokenization
+3. Lowercases and numbers conversion
+4. Non-ASCII characters and stopwords removal
 
 # Model
 
